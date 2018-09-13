@@ -1,0 +1,42 @@
+﻿<Window x:Class="Rottweiler.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Rottweiler" Height="550" Width="900" MinWidth="700" MinHeight="340" Closing="Window_Closing">
+    <Grid Background="#FF252525">
+        <!-- Main Asset List -->
+        <ListView x:Name="Sounds" Margin="10,42,10,41" AlternationCount="2" Background="#FF232323" Foreground="White" BorderBrush="#FF0C0C0C">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Name" Width="250" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn Header="Size" Width="96" DisplayMemberBinding="{Binding DisplaySize}"/>
+                    <GridViewColumn Header="Sample Rate" Width="96" DisplayMemberBinding="{Binding FrameRate}"/>
+                    <GridViewColumn Header="Length" Width="96" DisplayMemberBinding="{Binding DisplayLength}"/>
+                    <GridViewColumn Header="Format" Width="96" DisplayMemberBinding="{Binding Format}"/>
+                    <GridViewColumn Header="Channels" Width="96" DisplayMemberBinding="{Binding Channels}"/>
+                    <GridViewColumn Header="Location" Width="96" DisplayMemberBinding="{Binding Location}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <!-- Number of Loaded Assets -->
+        <Label x:Name="SoundsLoadedLabel" Content="0 Sounds Loaded" Margin="538,0,10,7" Foreground="White" Height="28" VerticalAlignment="Bottom" HorizontalContentAlignment="Right"/>
+        <!-- Search Box -->
+        <TextBox x:Name="SearchBox" TextChanged="SearchBox_TextChanged" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="28" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="329" BorderBrush="#FF0C0C0C" Background="#FF2E2E2E" Foreground="White"/>
+        <!-- Search Clear Button -->
+        <Button x:Name="ClearSearchButton" Click="ClearSearchButton_Click" Content="Clear" HorizontalAlignment="Left" Margin="344,10,0,0" VerticalAlignment="Top" Width="80" Height="28" ToolTip="Clear search "/>
+        <!-- Load Fast File Button -->
+        <Button x:Name="LoadFile" Click="LoadFile_Click" Content="Load Fast File" HorizontalAlignment="Left" Margin="10,0,0,8" VerticalAlignment="Bottom" Width="127" Height="28" ToolTip="Loads assets from a Black Ops III Fast File"/>
+        <!-- Exports Selected Assets -->
+        <Button x:Name="ExportSelectedButton" Click="ExportSelectedButton_Click" Content="Export Selected" HorizontalAlignment="Left" Margin="142,0,0,8" VerticalAlignment="Bottom" Width="127" Height="28" ToolTip="Export selected assets"/>
+        <!-- Exports All Assets -->
+        <Button x:Name="ExportAllButton" Click="ExportAllButton_Click" Content="Export All" HorizontalAlignment="Left" Margin="274,0,0,8" VerticalAlignment="Bottom" Width="127" Height="28" ToolTip="Export all assets listed"/>
+        <!-- Clears Loaded Assets, Files, etc. -->
+        <Button x:Name="ClearSoundsButton" Click="ClearSoundsButton_Click" Content="Clear Sounds" HorizontalAlignment="Left" Margin="406,0,0,8" VerticalAlignment="Bottom" Width="127" Height="28" ToolTip="Clear all loaded files and assets"/>
+        <!-- Loads the About Window -->
+        <Button x:Name="AboutButton" Content="About" Click="AboutButton_Click" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" Width="78" Height="28" ToolTip="Open about window"/>
+        <!-- Dim Box for when dialogs are active -->
+        <Rectangle x:Name="DimBox" Fill="#82000000" Visibility="Hidden"/>
+    </Grid>
+</Window>

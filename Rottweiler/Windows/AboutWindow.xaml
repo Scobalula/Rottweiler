@@ -1,0 +1,18 @@
+﻿<Window x:Class="Rottweiler.Windows.AboutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Rottweiler.Windows"
+        mc:Ignorable="d"
+        Title="About HydraX" Height="170.5" Width="400" WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize" WindowStyle="ToolWindow">
+    <Grid Background="#FF1B1B1B">
+        <Label Content="Rottweiler - Call of Duty Sound Exporter" HorizontalAlignment="Left" Margin="105,10,0,0" VerticalAlignment="Top" Height="27" Width="279" Background="{x:Null}" Foreground="White"/>
+        <Label Content="Developed by Scobalula" HorizontalAlignment="Left" Margin="105,37,0,0" VerticalAlignment="Top" Height="27" Width="279" Background="{x:Null}" Foreground="White"/>
+        <Label x:Name="VersionLabel" Content="Version: {0}" HorizontalAlignment="Left" Margin="105,64,0,0" VerticalAlignment="Top" Height="27" Width="279" Background="{x:Null}" Foreground="White"/>
+        <Button x:Name="HomePageButton" Click="HomePageButton_Click" Content="Homepage" HorizontalAlignment="Left" Margin="10,0,0,10" Width="90" Height="27" VerticalAlignment="Bottom"/>
+        <Button x:Name="DonateButton" Click="DonateButton_Click" Content="Donate" HorizontalAlignment="Left" Margin="105,0,0,10" Width="90" Height="27" VerticalAlignment="Bottom"/>
+        <Image Margin="10,10,294,42" Source="/Rottweiler;component/icon_white.png" Stretch="Fill"/>
+    </Grid>
+</Window>
