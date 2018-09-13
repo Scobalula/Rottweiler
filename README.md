@@ -42,7 +42,7 @@ Using Rottweiler is very easy, to use Rottweiler:
 
 ## License / Disclaimers
 
-Rottweiler is licensed under the MIT license and it and its source code is free to use and modify. Rottweiler comes with NO warranty, any damages caused are solely the responsibility of the user. See the LICENSE file for more information.
+Rottweiler is licensed under the GPL3.0 license and it and its source code is free to use and modify. Rottweiler comes with NO warranty, any damages caused are solely the responsibility of the user. See the LICENSE file for more information.
 
 Audio exported through Rottweiler is property of Activision and the respective developers, said copyrighted Audio CANNOT be used in a commercial environment or for profit, the intention of Rottweiler is to aid users making mods for other Call of Duty titles using their own SDKs.
 
